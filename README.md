@@ -1,5 +1,5 @@
 <div align="center">
-<span style="font-size:36px;"> # ** **E-Commerce Website: SDM Dulal PC Shop**  **  </span> 
+<span style="font-size:60px;">  ** **E-Commerce Website: SDM Dulal PC Shop**  **  </span> 
    
 ## Green University of Bangladesh  
 
