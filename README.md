@@ -1,7 +1,7 @@
 <div align="center">
-<span style="font-size:36px;">  ** E-Commerce Website: SDM Dulal PC Shop  **  </span> 
+<span style="font-size:36px;"> # ** **E-Commerce Website: SDM Dulal PC Shop**  **  </span> 
    
-# Green University of Bangladesh  
+## Green University of Bangladesh  
 
 ## Department of Computer Science and Engineering (CSE)  
 
