@@ -1,3 +1,4 @@
+<div align="center">
 # Green University of Bangladesh  
 ## Department of Computer Science and Engineering (CSE)  
 
@@ -16,7 +17,7 @@ MD Dulal Hossain | 213902116
 
 **Submission Date:** 09 - 06 - 2024  
 **Course Teacher’s Name:** Most. Rokeya Khatun  
-
+</div>
 ---
 
 ## Contents
