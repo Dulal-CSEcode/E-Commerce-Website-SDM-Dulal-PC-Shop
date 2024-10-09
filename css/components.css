@@ -1,0 +1,541 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+:root {
+  --green: rgb(38, 173, 95);
+  --orange: #f39c12;
+  --red: #e74c3c;
+  --black: #333;
+  --light-color: #666;
+  --white: #fff;
+  --light-bg: #f6f6f6;
+  --border: 0.2rem solid var(--black);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --text-decoration: none;
+}
+
+* {
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  color: var(--black);
+}
+
+*::selection {
+  background-color: #333;
+  color: #fff;
+}
+
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color:#0d6632;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #626462;
+}
+
+body {
+  background-color: rgb(240, 252, 243);
+  /* padding-bottom: 6.5rem; */
+}
+
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 6.5rem;
+  
+}
+
+section {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.disabled {
+  user-select: none;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.btn,
+.delete-btn,
+.option-btn {
+  display: block;
+  margin-top: 1rem;
+  border-radius: 0.6rem;
+  color: var(--white);
+  font-size: 2rem;
+  padding: 10px;
+  text-transform: capitalize;
+  cursor: pointer;
+  text-align: center;
+}
+.btn {
+  background-color: #22ad5c;
+}
+.delete-btn {
+  background-color: var(--red);
+}
+
+.option-btn {
+  background-color: rgb(105, 109, 106);
+  color: rgb(255, 255, 255);
+}
+
+.btn:hover,
+.delete-btn:hover,
+.option-btn:hover {
+  background-color: var(--black);
+  color: #fcfcfc;
+}
+
+.flex-btn {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.flex-btn > * {
+  flex: 1;
+}
+.title {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  color:rgb(0, 0, 0);
+  font-size: 2.9rem;
+  text-shadow: 3px 3px 3px #dde0dd;
+  
+}
+
+.message {
+  position: sticky;
+  top: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--light-bg);
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  z-index: 10000;
+}
+
+.message span {
+  font-size: 2rem;
+  color: #0d6632;
+}
+
+.message i {
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: var(--red);
+}
+
+.message i:hover {
+  color: rgb(2, 78, 2);
+}
+
+.empty {
+  padding: 1.5rem;
+  background:#fafcfb;
+  color: #208812;
+  border-radius: 0.5rem;
+  border: var(--border);
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  text-transform: capitalize;
+}
+
+@keyframes fadeIn {
+  0% {
+    transform: translateY(1rem);
+  }
+}
+
+.form-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container form {
+  width: 43rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 3px green;
+  border: 2px solid green;
+  padding: 4rem;
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-container form h3 {
+  font-size: 2.6rem;
+  color: rgb(7, 56, 5);
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 900;
+}
+
+.form-container form .box {
+  width: 100%;
+  font-size: 16px;
+  margin: 7px 0;
+  color: rgb(0, 0, 0);
+  border-radius: 7px;
+  font-weight: 700;
+  border: 3px solid rgb(54, 54, 54);
+  padding: 8px;
+  background-color: rgb(231, 240, 231);
+}
+.form-control i{
+  position: absolute;
+  top: 40px;
+  right: 10px;
+
+}
+.form-control small{
+  visibility: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.form-container form p {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(4, 4, 43);
+}
+
+.form-container form p a {
+  color: rgb(11, 173, 11);
+}
+
+.form-container form p a:hover {
+  text-decoration: underline rgb(0, 0, 0);
+}
+.login_regform .reg-btn {
+  background-color: rgb(6, 102, 27);
+  padding: 6px;
+  display: block;
+  width: 50%;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-family: "Dancing Script", cursive;
+}
+.login_regform .reg-btn:hover {
+  color: #fff;
+  background-color: rgb(45, 65, 49);
+}
+.form-container .btn {
+  background-color: rgb(6, 102, 27);
+  padding: 6px;
+  display: block;
+  width: 80%;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 20px;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-family: "Dancing Script", cursive;
+}
+.form-container .btn:hover {
+  color: #fff;
+  background-color: rgb(26, 36, 28);
+}
+
+.header {
+  background-color: #1ba554;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 1px 1px 10px 1px rgb(22, 26, 22);
+}
+
+.header .flex {
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  align-items: baseline;
+  position: relative;
+  justify-content: space-between;
+}
+
+.header .flex .logo {
+  font-size: 29px;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  padding-left: 0px;
+  font-family: "Sofia", sans-serif;
+  text-shadow: 3px 3px 3px #9b9999;
+}
+
+.header .flex .logo span {
+  color: #fff;
+ 
+}
+
+.header .flex .navbar a {
+  font-family: "Open Sans", sans-serif;
+  margin: 0 2.1rem;
+  font-size: 2.1rem;
+  color: rgb(255, 255, 255);
+}
+
+.header .flex .navbar a:hover {
+  color: rgb(0, 0, 0);
+}
+
+.header .flex .icons > * {
+  font-size: 2.5rem;
+  color: rgb(24, 26, 24);
+  cursor: pointer;
+  margin-left: 2rem;
+}
+
+.header .flex .icons > *:hover {
+  color: #fff;
+}
+
+.header .flex .icons a span,
+.header .flex .icons a i {
+  color: black;
+}
+
+.header .flex .icons a:hover span,
+.header .flex .icons a:hover i {
+  color: rgb(194, 241, 150);
+}
+
+.header .flex .icons a span {
+  font-size: 2rem;
+}
+
+#menu-btn {
+  display: none;
+}
+
+.header .flex .profile {
+  position: absolute;
+  top: 120%;
+  right: 2rem;
+  box-shadow: #0d6632 1px 1px 1px 1px;
+  border: var(--border);
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  background-color: #ffffff;
+  width: 28rem;
+  display: none;
+  animation: fadeIn 0.2s linear;
+}
+
+.header .flex .profile.active {
+  display: inline-block;
+}
+
+.header .flex .profile img {
+  height: 10rem;
+  width: 10rem;
+  margin-bottom: 0.5rem;
+  border-radius: 20%;
+  object-fit: cover;
+}
+
+.header .flex .profile p {
+  padding: 2px 0;
+  font-size: 2.2rem;
+  color: rgb(0, 0, 0);
+  font-weight: 600;
+  font-family: cursive;
+}
+/*--------------------------------------------update profile-----------------------------*/
+.update-profile form {
+  max-width: 59rem;
+  margin: 0 auto;
+  background-color:#ffffff;
+  box-shadow: var(--box-shadow);
+  border: var(--border);
+  border-radius: 0.5rem;
+  padding: 3rem;
+  text-align: center;
+}
+
+.update-profile form .flex {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+}
+
+.update-profile form img {
+  height: 18rem;
+  width: 18rem;
+  margin-bottom: 1rem;
+  border-radius: 10%;
+  object-fit: cover;
+}
+
+.update-profile form .inputBox {
+  text-align: left;
+  width: 50%;
+}
+
+.update-profile form .inputBox span {
+  display: block;
+  padding-top: 1rem;
+  font-size:1.9rem;
+  color: #000000;
+}
+
+.update-profile form .inputBox .box {
+  width: 100%;
+  padding: 1.2rem 1.4rem;
+  font-size: 1.8rem;
+  color: var(--black);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 1px 1px rgb(7, 129, 7);
+  margin: 1rem 0;
+  background-color:#e0e4e0;
+}
+
+.footer {
+  background-color: rgb(0, 0, 0);
+}
+
+.footer .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: rem;
+  align-items: flex-start;
+}
+
+.footer .box-container .box h3 {
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.footer .box-container .box a,
+.footer .box-container .box p {
+  display: block;
+  padding: 1.3rem 0;
+  font-size: 1.9rem;
+  color: #fff;
+}
+
+.footer .box-container .box a i,
+.footer .box-container .box p i {
+  color: #0edd64;
+  padding-right: 2rem;
+  font-size: 18px;
+}
+
+.footer .box-container .box a:hover {
+  text-decoration: underline;
+  color: #0edd64;
+}
+
+.footer .credit {
+  margin-top: 2rem;
+  padding: 2rem 1.5rem;
+  padding-bottom: 2.5rem;
+  line-height: 1.5;
+  border-top: var(--border);
+  text-align: center;
+  font-size: 2rem;
+  color: #f6f6f6;
+}
+
+.footer .credit span {
+  color: var(--green);
+}
+
+/* media queries  */
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  #menu-btn {
+    display: inline-block;
+  }
+
+  .header .flex .navbar {
+    border-top: var(--border);
+    border-bottom: var(--border);
+    background-color: black;
+    position: absolute;
+    top: 99%;
+    left: 0;
+    right: 0;
+    transition: 0.2s linear;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+  }
+  .header .flex .navbar a:hover {
+    color: #34f143;
+    background-color: #ffffff;
+    font-weight: 700;
+    width: 20px;
+  }
+  .header .flex .navbar.active {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .header .flex .navbar a {
+    display: block;
+    margin: 2rem;
+  }
+
+  .update-profile form .flex {
+    flex-wrap: wrap;
+    gap: 0;
+  }
+
+  .update-profile form .flex .inputBox {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+
+  .flex-btn {
+    flex-flow: column;
+    gap: 0;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+}

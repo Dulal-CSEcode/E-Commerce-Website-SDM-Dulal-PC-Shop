@@ -1,0 +1,311 @@
+@import url("components.css");
+
+.dashboard .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(27rem, 1fr));
+  gap: 2.1rem;
+  align-items: flex-start;
+}
+
+.dashboard .box-container .box {
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 1px 1px 6px 1px rgb(14, 129, 14);
+  background-color: rgb(255, 255, 255);
+  border-radius: 1rem;
+}
+
+.dashboard .box-container .box h3 {
+  font-size: 2rem;
+  color: rgb(7, 7, 7);
+}
+
+.dashboard .box-container .box p {
+  font-size: 2rem;
+  background-color: rgb(212, 216, 211);
+  color: black;
+  padding: 1rem;
+  margin: 1rem 0;
+  border: var(--border);
+  border-radius: 0.5rem;
+  color: var(--black);
+}
+
+.add-products form {
+  max-width: 70rem;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 1px 1px 7px 3px rgb(59, 136, 59);
+  background-color: rgb(255, 255, 255);
+  border-radius: 1.6rem;
+}
+
+.add-products form .flex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.add-products form .flex .inputBox {
+  width: 49%;
+}
+
+.add-products form .box {
+  width: 100%;
+  margin: 1rem 0;
+  padding: 1.2rem 1.4rem;
+  font-size: 1.8rem;
+  font-weight: 800;
+  border-radius: 0.5rem;
+  background-color: rgb(211, 241, 217);
+}
+
+.add-products form textarea {
+  height: 20rem;
+  resize: none;
+}
+.add-products form .btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+/* ---------------------added product to show---------*/
+
+.show-products {
+  padding-top: 0;
+}
+
+.show-products .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 27rem);
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.show-products .box-container .box {
+  text-align: center;
+  border: 1px ridge black;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  padding: 2rem;
+}
+
+.show-products .box-container .box .price {
+  position: absolute;
+  padding: 5px;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--white);
+  background-color: rgb(0, 0, 0);
+  border-radius: 0.5rem;
+}
+
+.show-products .box-container .box img {
+  margin-bottom: 2rem;
+  width: 210px;
+  height: 210px;
+}
+
+.show-products .box-container .box .name {
+  margin: 0.5rem 0;
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: rgb(39, 190, 39);
+}
+
+.show-products .box-container .box .cat {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: rgb(80, 80, 80);
+}
+
+.show-products .box-container .box .details {
+  padding-top: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: var(--light-color);
+}
+.show-products .box-container .flex-btn .option-btn {
+  background-color: rgb(75, 161, 82);
+  color: rgb(255, 255, 255);
+}
+
+/*----------update product----------*/
+
+.update-product form {
+  max-width: 45rem;
+  padding: 3rem;
+  margin: 0 auto;
+  text-align: center;
+  box-shadow: 1px 1px 7px 3px rgb(43, 160, 43);
+  background-color: var(--white);
+  border-radius: 2rem;
+}
+
+.update-product form img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+}
+
+.update-product form .box {
+  width: 100%;
+  border: var(--border);
+  border-radius: 0.5rem;
+  background-color: rgb(211, 241, 219);
+  padding: 1.2rem 1.2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--black);
+  margin: 0.5rem 0;
+}
+/*------------------place Order-----------------*/
+
+.placed-orders .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 30rem);
+  gap:5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.placed-orders .box-container .box {
+  width: 300px;
+  border-radius: 1rem;
+  background-color: rgb(252, 255, 252);
+  padding: 20px;
+  border-style: outset;
+}
+
+.placed-orders .box-container .box p {
+  margin-bottom: 1rem;
+  line-height: 1.5;
+  font-size: 1.8rem;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+
+.placed-orders .box-container .box p span {
+  color:rgb(6, 165, 6);
+  font-weight: 500;
+}
+
+.placed-orders .box-container .box .drop-down {
+  width: 100%;
+  padding: 0.5rem 1.2rem;
+  font-size: 1.6rem;
+  color: black;
+  border: 1px solid;
+  border-radius: 0.5rem;
+  background-color:rgb(248, 248, 248);
+  margin-bottom: 0.5rem;
+}
+/*--------------------------
+------------------------------------user-account-----------------*/
+
+.user-accounts .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 33rem);
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.user-accounts .box-container .box {
+  border: 1px solid;
+  box-shadow: var(--box-shadow);
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  padding: 2rem;
+  text-align: center;
+  width: 280px;
+}
+
+.user-accounts .box-container .box img {
+  height: 10rem;
+  width: 10rem;
+  border-radius: 10%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 2px solid;
+}
+
+.user-accounts .box-container .box p {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+  font-size: 1.8rem;
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+}
+.user-accounts .box-container .box p span {
+  color:rgb(6, 165, 6);
+  font-weight: 500;
+  margin: 2px;
+   
+}
+/*-------------------------------------------
+------------------------------------use message--------------------*/
+
+.messages .box-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 33rem);
+  gap: 1.5rem;
+  align-items: flex-start;
+  justify-content: center;
+  
+}
+
+.messages .box-container .box {
+  box-shadow: 1px 1px 3px 1px rgb(8, 46, 8);
+  background-color: var(--white);
+  border-radius: 3rem;
+  padding: 2rem;
+  background-color: rgb(252, 255, 252);
+  padding: 20px;
+  border-style: outset; 
+}
+
+.messages .box-container .box p {
+  line-height: 1.5;
+  padding: 0.5rem 0;
+  font-size: 2rem;
+  color:black;
+  font-weight: 500;
+}
+
+.messages .box-container .box p span {
+ color: rgb(6, 185, 45);
+ font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .add-products form .flex .inputBox {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) {
+  .show-products .box-container {
+    grid-template-columns: 1fr;
+  }
+
+  .update-product form img {
+    height: auto;
+    width: 100%;
+  }
+
+  .placed-orders .box-container {
+    grid-template-columns: 1fr;
+  }
+
+  .user-accounts .box-container {
+    grid-template-columns: 1fr;
+  }
+
+  .messages .box-container {
+    grid-template-columns: 1fr;
+  }
+}
